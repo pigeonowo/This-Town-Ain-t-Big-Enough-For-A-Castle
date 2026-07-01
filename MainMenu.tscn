@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://ba6r6i7d5dbxe"]
+
+[ext_resource type="Script" uid="uid://dxxx7w7c4ees0" path="res://main_menu.gd" id="1_i26rj"]
+[ext_resource type="AudioStream" uid="uid://gr04hgxwdkxf" path="res://assets/WildCircus_MainTheme.ogg" id="2_eiy7p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tltqe"]
+font_size = 32
+
+[node name="MainMenu" type="Control" unique_id=1535596237]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i26rj")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1031717162]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=874311053]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1455458217]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PLAY"
+
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1294887571]
+unique_name_in_owner = true
+layout_mode = 2
+text = "QUIT"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1365162476]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1247484840]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 127.0
+offset_right = 875.0
+offset_bottom = 172.0
+text = "This Town Ain't Big Enough For A Castle"
+label_settings = SubResource("LabelSettings_tltqe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Maintheme" type="AudioStreamPlayer" parent="." unique_id=1746151938]
+unique_name_in_owner = true
+stream = ExtResource("2_eiy7p")
+autoplay = true
